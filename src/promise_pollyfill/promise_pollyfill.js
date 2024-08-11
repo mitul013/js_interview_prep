@@ -71,7 +71,9 @@ const customPromise = new PromisePollyFill((resolve, reject) => {
 customPromise
   .then((val) => {
     console.log(val);
+    return "123";
   })
+  .then((val) => console.log("second", val))
   .catch((err) => {
     console.error(err);
   });
